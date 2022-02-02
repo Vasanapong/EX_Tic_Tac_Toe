@@ -23,7 +23,7 @@ const CheckTTT = () =>{
 
     // Return Result
     if(check1) return 'X'
-    if(check2) return 'Y'
+    if(check2) return 'O'
     return 'draw'
 }
 
