@@ -5,6 +5,33 @@
 //             if not complete return null
 //             X = 1 , O = 2
 
+// Array Loop Method 
+
+const CheckTTT = () =>{
+
+    // Check Input
+    if(arrTicTacToe.length !== 3) return null
+    for(let i = 0; i < 3; i++){ if(arrTicTacToe[i].includes(undefined)) return null}
+
+    // Manage Array
+    let winCondition = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4,6 ]]
+    let singleArray = [...arrTicTacToe[0], ...arrTicTacToe[1], ...arrTicTacToe[2]]
+    
+    // CheckWin
+    let check1 = winCondition.some((condition)=> condition.every((index)=>singleArray[index] === 1))
+    let check2 = winCondition.some((condition)=> condition.every((index)=>singleArray[index] === 2))
+
+    // Return Result
+    if(check1) return 'X'
+    if(check2) return 'Y'
+    return 'draw'
+}
+
+let arrTicTacToe = [[1, 2, 0],[0, 1, 2],[0, 0, 1]]
+console.log(CheckTTT(arrTicTacToe))
+
+// Hard Code Method
+
 const checkTTT = (arr) => {
     let arrCheck = false
     let winner = null
@@ -66,5 +93,4 @@ const checkTTT = (arr) => {
 }
 
 let arrTicTacToe = [[1, 2, 0],[0, 1, 2],[0, 0, 1]]
-
 console.log(checkTTT(arrTicTacToe))
