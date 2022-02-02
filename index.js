@@ -10,9 +10,9 @@ const checkTTT = (arr1, arr2, arr3) => {
     let winner = null
 
     // Check Game State finish or not
-    if(arr1.length === 3){
-        if(arr2.length === 3){
-            if(arr3.length ===  3){
+    if(arr1.length === 3 && !arr1.includes(undefined)){
+        if(arr2.length === 3 && !arr2.includes(undefined)){
+            if(arr3.length ===  3 && !arr3.includes(undefined)){
                 arrCheck = true
             }
         }
@@ -59,7 +59,7 @@ const checkTTT = (arr1, arr2, arr3) => {
     return 'draw'
 }
 
-let arr1 = [2, 0, 0]
+let arr1 = [1, 0, 0]
 let arr2 = [0, 0, 1]
 let arr3 = [1, 0, 2]
 
