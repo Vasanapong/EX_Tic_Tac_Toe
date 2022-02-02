@@ -65,6 +65,6 @@ const checkTTT = (arr) => {
     return 'draw'
 }
 
-let arrTicTacToe = [[0, 2, 0],[1, 2, 1],[1, 2, 1]]
+let arrTicTacToe = [[1, 2, 0],[0, 1, 2],[0, 0, 1]]
 
 console.log(checkTTT(arrTicTacToe))
