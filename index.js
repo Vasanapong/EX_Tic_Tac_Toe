@@ -5,9 +5,15 @@
 //             if not complete return null
 //             X = 1 , O = 2
 
-const checkTTT = (arr1, arr2, arr3) => {
+const checkTTT = (arr) => {
     let arrCheck = false
     let winner = null
+
+    if(arr.length !== 3) return null
+
+    let arr1 = arr[0]
+    let arr2 = arr[1]
+    let arr3 = arr[2]
 
     // Check Game State finish or not
     if(arr1.length === 3 && !arr1.includes(undefined)){
@@ -59,8 +65,6 @@ const checkTTT = (arr1, arr2, arr3) => {
     return 'draw'
 }
 
-let arr1 = [1, 0, 0]
-let arr2 = [0, 0, 1]
-let arr3 = [1, 0, 2]
+let arrTicTacToe = [[1, 0, 0],[0, 1, 1],[1, 1, 1]]
 
-console.log(checkTTT(arr1, arr2, arr3))
+console.log(checkTTT(arrTicTacToe))
