@@ -28,33 +28,33 @@ const checkTTT = (arr) => {
 
     // Horizon Check
     if (arr1[0] === 1 && arr1[1] === 1 && arr1[2] === 1) winner = 'X'
-    if (arr2[0] === 1 && arr2[1] === 1 && arr2[2] === 1) winner = 'X'
-    if (arr3[0] === 1 && arr3[1] === 1 && arr3[2] === 1) winner = 'X'
+    else if (arr2[0] === 1 && arr2[1] === 1 && arr2[2] === 1) winner = 'X'
+    else if (arr3[0] === 1 && arr3[1] === 1 && arr3[2] === 1) winner = 'X'
 
     // Vertical Check
-    if (arr1[0] === 1 && arr2[0] === 1 && arr3[0] === 1) winner = 'X'
-    if (arr1[1] === 1 && arr2[1] === 1 && arr3[1] === 1) winner = 'X'
-    if (arr1[2] === 1 && arr2[2] === 1 && arr3[2] === 1) winner = 'X'
+    else if (arr1[0] === 1 && arr2[0] === 1 && arr3[0] === 1) winner = 'X'
+    else if (arr1[1] === 1 && arr2[1] === 1 && arr3[1] === 1) winner = 'X'
+    else if (arr1[2] === 1 && arr2[2] === 1 && arr3[2] === 1) winner = 'X'
 
     // Extra Check
-    if (arr1[0] === 1 && arr2[1] === 1 && arr3[2] === 1) winner = 'X'
-    if (arr1[2] === 1 && arr2[1] === 1 && arr3[0] === 1) winner = 'X'
+    else if (arr1[0] === 1 && arr2[1] === 1 && arr3[2] === 1) winner = 'X'
+    else if (arr1[2] === 1 && arr2[1] === 1 && arr3[0] === 1) winner = 'X'
 
     // WinCondition Check O
 
     // Horizon Check
-    if (arr1[0] === 2 && arr1[1] === 2 && arr1[2] === 2) winner = 'O'
-    if (arr2[0] === 2 && arr2[1] === 2 && arr2[2] === 2) winner = 'O'
-    if (arr3[0] === 2 && arr3[1] === 2 && arr3[2] === 2) winner = 'O'
+    else if (arr1[0] === 2 && arr1[1] === 2 && arr1[2] === 2) winner = 'O'
+    else if (arr2[0] === 2 && arr2[1] === 2 && arr2[2] === 2) winner = 'O'
+    else if (arr3[0] === 2 && arr3[1] === 2 && arr3[2] === 2) winner = 'O'
 
     // Vertical Check
-    if (arr1[0] === 2 && arr2[0] === 2 && arr3[0] === 2) winner = 'O'
-    if (arr1[1] === 2 && arr2[1] === 2 && arr3[1] === 2) winner = 'O'
-    if (arr1[2] === 2 && arr2[2] === 2 && arr3[2] === 2) winner = 'O'
+    else if (arr1[0] === 2 && arr2[0] === 2 && arr3[0] === 2) winner = 'O'
+    else if (arr1[1] === 2 && arr2[1] === 2 && arr3[1] === 2) winner = 'O'
+    else if (arr1[2] === 2 && arr2[2] === 2 && arr3[2] === 2) winner = 'O'
 
     // Extra Check
-    if (arr1[0] === 2 && arr2[1] === 2 && arr3[2] === 2) winner = 'O'
-    if (arr1[2] === 2 && arr2[1] === 2 && arr3[0] === 2) winner = 'O'
+    else if (arr1[0] === 2 && arr2[1] === 2 && arr3[2] === 2) winner = 'O'
+    else if (arr1[2] === 2 && arr2[1] === 2 && arr3[0] === 2) winner = 'O'
 
     // If Game not complete...
     if(!arrCheck) return null
@@ -65,6 +65,6 @@ const checkTTT = (arr) => {
     return 'draw'
 }
 
-let arrTicTacToe = [[1, 0, 0],[0, 1, 1],[1, 1, 1]]
+let arrTicTacToe = [[0, 2, 0],[1, 2, 1],[1, 2, 1]]
 
 console.log(checkTTT(arrTicTacToe))
